@@ -4,7 +4,6 @@ import urllib.parse
 import pandas as pd
 import queue
 from time import sleep
-import random
 
 # the path of the crawled image stored locally
 PATH = "/Users/emisonlu/Desktop/photo/"
@@ -156,7 +155,7 @@ def spider_layer2(cookies):
         result_layer2["name"].append("")
         result_layer2["comment"].append("")
 
-    # store the information crawled on the first layer in csv format locally
+    # store the information crawled on the second layer in csv format locally
     df = pd.DataFrame(result_layer2)
     df.to_csv("layer2.csv", encoding="utf-8_sig")
 
